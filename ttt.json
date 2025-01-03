@@ -1,0 +1,50 @@
+{
+  "person": {
+    "name": "Pr. Dambldore",
+    "position": "director",
+    "workplace": "Hogwards",
+    "students": [
+      {
+        "name": "Harry Potter",
+        "favorite": true,
+        "pets": [
+          {
+            "name": "buklya"
+          }
+        ],
+        "chosen_one": true
+      },
+      {
+        "name": "Hermiona Granger",
+        "favorite": true,
+        "pets": [
+          {
+            "type": "cat",
+            "name": "Cot objora"
+          }
+        ],
+        "chosen_one": false,
+        "hobbies": ["study", "cinema", "music"]
+      },
+      {
+        "name": "Ron Uizly",
+        "favorite": false,
+        "pets": [
+          {
+            "type": "rat",
+            "name": "Hvost"
+          },
+          {
+            "type": "fish",
+            "name": null
+          },
+          {
+            "type": "fish",
+            "name": null
+          }
+        ],
+        "chosen_one": true
+      }
+    ]
+  }
+}
