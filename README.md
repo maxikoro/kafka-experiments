@@ -23,8 +23,17 @@ A step by step series of examples that tell you how to get a development env run
 ```
 git clone https://github.com/maxikoro/kafka-experiments.git
 cd kafka-experiments
-docker-compose up -d
+docker compose up -d
 ```
+
+### Если есть проблема с билдом питон контейнеров на хостинге, то вот решение:
+The reason for this is issue is an MTU mismatch of your network interfaces. If you open the base image from your Dockerfile in interactive mode: sudo docker run -it {your base image repo} /bin/bash, and run ip a, then do the same on your host OS, you will probably find that they are different. This means that the Docker bridge is dropping packets / failing transmission. If you want bridge networking to work as opposed to host, create a file on your host OS at /etc/docker/daemon.json with the contents
+```
+{
+    "mtu": whatever_your_host_os_MTU_is
+}
+```
+and then run sudo systemctl restart docker, this should probably fix your bridge networking.
 
 ## Usage <a name = "usage"></a>
 
