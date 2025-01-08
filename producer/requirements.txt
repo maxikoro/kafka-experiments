@@ -1,2 +1,2 @@
-confluent-kafka
-pylorem
+confluent-kafka==2.6.0
+pylorem==1.2
